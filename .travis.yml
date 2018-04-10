@@ -14,4 +14,5 @@ script:
   - sudo ./openwrt.sdk.download
   - sudo ./openwrt.sdk.prepare
   - sudo ./openwrt.sdk.feeds
+  - cat ./openwrt.sdk.make
   - sudo ./openwrt.sdk.make
