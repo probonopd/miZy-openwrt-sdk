@@ -8,4 +8,4 @@ install:
 
 script:
   - wget https://raw.githubusercontent.com/hyphop/miZy-openwrt-sdk/master/make_it_easy
-  - sudo bash -ex make-it-easy
+  - sudo bash -ex make_it_easy
