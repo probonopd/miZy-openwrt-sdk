@@ -11,7 +11,7 @@ script:
   - cd /tmp/zero_builder
   - git clone https://github.com/hyphop/miZy-openwrt-sdk
   - cd miZy-openwrt-sdk
-  - ./openwrt.sdk.download
-  - ./openwrt.sdk.prepare
-  - ./openwrt.sdk.feeds
-  - ./openwrt.sdk.make
+  - sudo ./openwrt.sdk.download
+  - sudo ./openwrt.sdk.prepare
+  - sudo ./openwrt.sdk.feeds
+  - sudo ./openwrt.sdk.make
