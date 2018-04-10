@@ -7,5 +7,11 @@ install:
   - sudo apt-get -y install bison make flex time ash bc python gettext ncurses-dev u-boot-tools squashfs-tools zlib1g-dev xsltproc bzip2 lzma lzop lbzip2 gawk xz-utils aufs-tools subversion git mercurial
 
 script:
-  - wget https://raw.githubusercontent.com/hyphop/miZy-openwrt-sdk/master/make_it_easy
-  - sudo bash -ex make_it_easy
+  - [ -p /tmp/zero_builder ] || mkdir -p /tmp/zero_builder 
+  - cd /tmp/zero_builder
+  - git clone https://github.com/hyphop/miZy-openwrt-sdk.git
+  - cd miZy-openwrt-sdk
+  - ./openwrt.sdk.download
+  - ./openwrt.sdk.prepare
+  - ./openwrt.sdk.feeds
+  - ./openwrt.sdk.make
